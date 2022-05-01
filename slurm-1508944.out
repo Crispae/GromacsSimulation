@@ -1,0 +1,96 @@
+
+Lmod is automatically replacing "cce/11.0.4" with "gcc/10.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.0.0" with "PrgEnv-gnu/8.0.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/21.04.1.1 => cray-libsci/21.08.1.2
+  2) cray-mpich/8.1.4 => cray-mpich/8.1.9
+  3) craype/2.7.6 => craype/2.7.10
+
+                      :-) GROMACS - gmx mdrun, 2021.3 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2021.3
+Executable:   /work/y07/shared/apps/core/gromacs/2021.3/bin/gmx_mpi
+Data prefix:  /work/y07/shared/apps/core/gromacs/2021.3
+Working dir:  /mnt/lustre/a2fs-work2/work/ta059/ta059/kumar/gmx_init
+Command line:
+  gmx_mpi mdrun -deffnm npt
+
+Reading file npt.tpr, VERSION 2021.3 (single precision)
+Changing nstlist from 10 to 50, rlist from 1 to 1.115
+
+Using 512 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread per MPI process
+
+starting mdrun 'LYSOZYME in water'
+50000 steps,    100.0 ps.
+
+Writing final coordinates.
+
+
+Dynamic load balancing report:
+ DLB was off during the run due to low measured imbalance.
+ Average load imbalance: 33.6%.
+ The balanceable part of the MD step is 44%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 14.7%.
+ Average PME mesh/force load: 1.415
+ Part of the total run time spent waiting due to PP/PME imbalance: 18.2 %
+
+NOTE: 14.7 % of the available CPU time was lost due to load imbalance
+      in the domain decomposition.
+      Dynamic load balancing was automatically disabled, but it might be beneficial to manually tuning it on (option -dlb on.)
+      You can also consider manually changing the decomposition (option -dd);
+      e.g. by using fewer domains along the box dimension in which there is
+      considerable inhomogeneity in the simulated system.
+NOTE: 18.2 % performance was lost because the PME ranks
+      had more work to do than the PP ranks.
+      You might want to increase the number of PME ranks
+      or increase the cut-off and the grid spacing.
+
+
+NOTE: 8 % of the run time was spent communicating energies,
+      you might want to increase some nst* mdp options
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     7411.810       14.496    51130.7
+                 (ns/day)    (hour/ns)
+Performance:      596.046        0.040
+
+GROMACS reminds you: "If all it takes to motivate you is a fancy picture and quote, you probably have a very easy job. The type of job computers will soon be doing." (Anonymous)
+
